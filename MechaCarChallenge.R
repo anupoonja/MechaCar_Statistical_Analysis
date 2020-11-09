@@ -26,22 +26,15 @@ ggplot(suspension_data,aes(x=PSI)) + geom_density()
 
 # Create total_summary dataframe using summarize function to get mean, median, variance, and standard
 # deviation of the suspension coil's PSI column
-Mean=mean(suspension_data$PSI)
-Mean
-Median=median(suspension_data$PSI)
-Median
-Variance=var(suspension_data$PSI)
-Variance
-SD=sd(suspension_data$PSI)
-SD
 
-total_summary <- suspension_data %>% summarize(Mean, Median, Variance, SD)
+#total_summary <- suspension_data %>% summarize(Mean, Median, Variance, SD)
+total_summary <- suspension_data %>% summarize(mean(PSI), median(PSI), var(PSI), sd(PSI))
 head(total_summary)
 
 # Determine Summary by lot
 lot_summary <-suspension_data %>% group_by(Manufacturing_Lot) %>% 
-  summarize(Mean, Median, Variance, SD, .groups='keep')
-lot_summary
+  summarize(Mean=mean(PSI), Median=median(PSI), Variance=var(PSI), SD=sd(PSI), .groups='keep')
+head(lot_summary)
 
 # Deliverable 3 : T-Test on Suspension coils
 
