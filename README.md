@@ -68,3 +68,20 @@ P-value of Lot_3 is 0.042. It is less than the significance level of 0.05. This 
 # Deliverable 4 :
 
 ## Study Design: MechaCar vs Competition
+
+With technological advancements each year, people want car that is latest, greatest and with good value for money. Along with updating to new cars comes the question about the resale value of the old cars. The resale value of the car makes a huge difference while deciding to buy the car.
+To place the MechaCar ahead of its competition cars, a statistical study can be performed to quantify the resale value of the MechaCar in the market against the competition cars.
+
+### What metric or metrics are you going to test?
+We would have to collect the resale value of the cars based on the milage and the year of manufacture.
+
+### What is the null hypothesis or alternative hypothesis?
+H0: There is no statistical difference between our resale value dataset and other comparable vehicles resale value dataset in the market.
+Ha: The true mean of our resale value dataset is GREATER than the mean of our competitors resale value dataset.
+
+### What statistical test would you use to test the hypothesis? And why?
+ANOVA is useful in measuring multiple samples. Hence we can use *two-way ANOVA*(Analysis of Variance) test to see the distribution means for different mileage and year of manufacture for the MechaCar.
+
+### What data is needed to run the statistical test?
+A dataset and a formula to intercept the different variables and factors. We can use the formula Y ~ A or Y ~ A + B, where Y is the column name of the dependent variable(resale value) and A,B (milage, year of manufacture) are the column names of the independent variable.
+
